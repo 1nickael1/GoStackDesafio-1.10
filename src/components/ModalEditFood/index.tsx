@@ -1,3 +1,4 @@
+
 import React, { useRef, useCallback } from 'react';
 
 import { FiCheckSquare } from 'react-icons/fi';
@@ -39,7 +40,9 @@ const ModalEditFood: React.FC<IModalProps> = ({
 
   const handleSubmit = useCallback(
     async (data: IEditFoodData) => {
-      // EDIT A FOOD PLATE AND CLOSE THE MODAL
+      handleUpdateFood(data);
+
+      setIsOpen();
     },
     [handleUpdateFood, setIsOpen],
   );
